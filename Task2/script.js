@@ -16,7 +16,7 @@ function validateField(name, value){
   const rule = validators[name];
   if(!rule) return true;
   const ok = rule(value);
-  return ok === true ? true : ok; // return true or error string
+  return ok === true ? true : ok; 
 }
 
 form.addEventListener('submit', (e)=>{
@@ -41,16 +41,13 @@ form.addEventListener('submit', (e)=>{
     return;
   }
 
-  // fake submit — show success and reset
   formAlert.textContent = 'Message sent. (demo)';
   form.reset();
 });
 
-// reset button
 const resetBtn = document.getElementById('resetBtn');
 resetBtn.addEventListener('click', ()=>{ form.reset(); document.querySelectorAll('.error').forEach(e=>e.textContent=''); formAlert.textContent=''; });
 
-// ---------- Simple DOM demo (paragraphs) ----------
 const paras = document.getElementById('paras');
 const addParaBtn = document.getElementById('addPara');
 const clearParasBtn = document.getElementById('clearParas');
@@ -65,7 +62,6 @@ addParaBtn.addEventListener('click', ()=>{
 });
 clearParasBtn.addEventListener('click', ()=>{ paras.innerHTML = ''; paraCount = 0; });
 
-// ---------- Todo list (localStorage) ----------
 const todoInput = document.getElementById('todoInput');
 const addTodoBtn = document.getElementById('addTodo');
 const todoListEl = document.getElementById('todoList');
@@ -106,7 +102,6 @@ addTodoBtn.addEventListener('click', ()=>{
   saveTodos(); renderTodos();
 });
 
-// checkbox and delete handling via event delegation
 todoListEl.addEventListener('click', (e)=>{
   const del = e.target.closest('button[data-action="del"]');
   if(del){
@@ -128,5 +123,4 @@ clearCompletedBtn.addEventListener('click', ()=>{
 });
 clearAllBtn.addEventListener('click', ()=>{ todos = []; saveTodos(); renderTodos(); });
 
-// initial render
 renderTodos();
