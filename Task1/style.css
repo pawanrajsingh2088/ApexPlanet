@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #f0f9ff, #cbebff);
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+nav {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    margin: 0 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: white;
+    transition: width 0.3s;
+}
+nav a:hover {
+    color: #ffd369;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(135deg, #4CAF50, #81c784);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+main section {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+main section:hover {
+    transform: translateY(-5px);
+}
+main img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    margin-top: 25px;
+}
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #43a047, #57c360);
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+}
